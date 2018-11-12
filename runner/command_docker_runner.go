@@ -28,7 +28,7 @@ func (runner DockerCommandRunner) Run(cmdStr string) (stdOut string, stdErr stri
 	var cmd string
 
 	if runner.CommandPattern != "" {
-		cmd = fmt.Sprintf(runner.CommandPattern, runner.Container, runner.Shell, cmdStr)
+		cmd = fmt.Sprintf(runner.CommandPattern, runner.Container, cmdStr)
 	} else {
 		cmd = fmt.Sprintf("docker exec %s %s -c '%s'", runner.Container, runner.Shell, cmdStr)
 	}
