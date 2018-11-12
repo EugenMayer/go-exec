@@ -23,7 +23,7 @@ func FilesInFolder(runner runner.CommandRunner, srcPath string) ([]string, error
 }
 
 func TarGz(runner runner.CommandRunner, baseFolder string, files []string, destFile string) (error) {
-	_,_, err := runner.Run(fmt.Sprintf("cd %s && tar cfz %s -%s", baseFolder, destFile, strings.Join(files, " ")))
+	_,_, err := runner.Run(fmt.Sprintf("cd %s && tar czf %s %s", baseFolder, destFile, strings.Join(files, " ")))
 	if err != nil {
 		return err
 	}
