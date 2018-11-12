@@ -21,3 +21,11 @@ func FilesInFolder(runner runner.CommandRunner, srcPath string) ([]string, error
 
 	return filePaths, nil
 }
+
+func TarGz(runner runner.CommandRunner, baseFolder string, files []string, destFile string) (error) {
+	_,_, err := runner.Run(fmt.Sprintf("cd %s && tar cfz %s -%s", baseFolder, destFile, strings.Join(files, " ")))
+	if err != nil {
+		return err
+	}
+	return nil
+}
