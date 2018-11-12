@@ -9,6 +9,13 @@ type CopyFromRemoteToLocalRunner struct {
 	Verbose bool
 }
 
+
+func NewCopyFromRemoteToLocalRunner(sshApi  *sshwrapper.SshApi) CopyFromRemoteToLocalRunner {
+	return CopyFromRemoteToLocalRunner{
+		SshApi: sshApi,
+	}
+}
+
 func (runner CopyFromRemoteToLocalRunner) Copy(source string, dest string) (stdOut string, stdErr string, err error) {
 	err = runner.SshApi.CopyFromRemote(source, dest)
 	return runner.SshApi.GetStdOut(), runner.SshApi.GetStdErr(), err

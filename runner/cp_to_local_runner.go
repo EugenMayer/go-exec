@@ -11,6 +11,12 @@ type CopyToLocalFromLocalRunner struct {
 	Verbose bool
 }
 
+func NewCopyToLocalFromLocalRunner(sshApi  *sshwrapper.SshApi) CopyToLocalFromLocalRunner {
+	return CopyToLocalFromLocalRunner{
+		SshApi: sshApi,
+	}
+}
+
 func (runner CopyToLocalFromLocalRunner) Copy(source string, dest string) (stdOut string, stdErr string, err error) {
 	in, err := os.Open(source)
 	if err != nil {

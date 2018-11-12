@@ -10,6 +10,12 @@ type SshCommandRunner struct {
 	Verbose bool
 }
 
+func NewSshCommandRunner(sshApi  *sshwrapper.SshApi) SshCommandRunner {
+	return SshCommandRunner{
+		SshApi: sshApi,
+	}
+}
+
 func (runner SshCommandRunner) Run(cmdStr string) (stdOut string, stdErr string, err error) {
 	if runner.Verbose {
 		fmt.Println(fmt.Sprintf("Using SSH. Running on server: %s. Running command: %s", runner.SshApi.Host, cmdStr))
