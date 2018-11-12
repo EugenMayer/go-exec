@@ -1,15 +1,12 @@
 package exec
 
 import (
-	"bufio"
 	"bytes"
 	"errors"
 	"fmt"
-	"github.com/eugenmayer/go-exec/runner"
 	"log"
 	"os"
 	"os/exec"
-	"strings"
 )
 
 // Run a command right away
