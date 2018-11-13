@@ -10,7 +10,7 @@ import (
 func FilesInFolder(runner runner.CommandRunner, srcPath string, filenamesOnly bool) ([]string, error) {
 	var cmd = fmt.Sprintf("find %s -type f", srcPath)
 	if filenamesOnly {
-		cmd = fmt.Sprintf("%s -printf '%f\n'", cmd)
+		cmd = cmd + " -printf '%f\n'"
 	}
 	stdout,_, err := runner.Run(cmd)
 	if err != nil {
