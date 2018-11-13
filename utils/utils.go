@@ -7,8 +7,12 @@ import (
 	"strings"
 )
 
-func FilesInFolder(runner runner.CommandRunner, srcPath string) ([]string, error) {
-	stdout,_, err := runner.Run(fmt.Sprintf("find %s -type f", srcPath))
+func FilesInFolder(runner runner.CommandRunner, srcPath string, filenamesOnly bool) ([]string, error) {
+	var cmd = fmt.Sprintf("find %s -type f", srcPath)
+	if filenamesOnly {
+		cmd = fmt.Sprintf("%s -printf '%f\n'", cmd)
+	}
+	stdout,_, err := runner.Run(cmd)
 	if err != nil {
 		return []string{}, err
 	}
