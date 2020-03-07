@@ -5,14 +5,14 @@ Advanced topic, introduce a command/strategy patter to abstract if want to run a
 
 ## Usage
 
-See the examples at [go-antibash-boilerplate](https://github.com/EugenMayer/go-antibash-boilerplate/blob/master/cmd/myexec.go#L21)
+See the examples at [go-shell-cli-quickstarter](https://github.com/EugenMayer/go-shell-cli-quickstarter/blob/master/cmd/myexec.go#L21)
 
 ```go
 
 package mystuff
 
 import (
-	"github.com/eugenmayer/go-exec/exec"
+	"github.com/eugenmayer/go-exec/exec/v1"
 )
 
 
