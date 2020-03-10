@@ -12,17 +12,17 @@ See the examples at [go-shell-cli-quickstarter](https://github.com/EugenMayer/go
 package mystuff
 
 import (
-	"github.com/eugenmayer/go-exec/exec/v1"
+	"github.com/eugenmayer/go-exec/exec"
 )
 
 
-if stdout, stderr, err := exec.Run("echo hi"); err != nil {
+if stdout, stderr, err := exec.Run("echo hi", true); err != nil {
     log.Print(stdout)
     log.Print(stderr)
     log.Fatal(err)
 }
 
-if stdout, stderr, err := exec.Run("echo ho"); err != nil {
+if stdout, stderr, err := exec.Run("echo ho", true); err != nil {
     log.Print(stdout)
     log.Print(stderr)
     log.Fatal(err)
