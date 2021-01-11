@@ -1,6 +1,6 @@
 module github.com/eugenmayer/go-exec
 
-go 1.14
+go 1.15
 
 require (
 	github.com/eugenmayer/go-sshclient v0.0.0-20190908070959-1e92f9869e7c
