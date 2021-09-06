@@ -57,7 +57,7 @@ func RunInDir(cmdStr string, workingDir string, verbose bool) (stdOut string, st
 	stdOut = readBuffer(stdOutStream)
 	stdErr = readBuffer(stdErrStream)
 
-	err = cmd.Run()
+	err = cmd.Wait()
 
 	if err != nil {
 		err = errors.New(err.Error() + "\n" + stdErr)
