@@ -78,7 +78,7 @@ func RunFatal(cmdStr string, verbose bool) (stdOut string, stdErr string) {
 
 func readBuffer(buffer io.ReadCloser) string {
 	scanner := bufio.NewScanner(buffer)
-	scanner.Split(bufio.ScanWords)
+	scanner.Split(bufio.ScanLines)
 	var out = ""
 	for scanner.Scan() {
 		m := scanner.Text()
