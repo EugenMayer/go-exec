@@ -1,8 +1,8 @@
 github.com/creack/pty v1.1.18 h1:n56/Zwd5o6whRC5PMGretI4IdRLlmBXYNjScPaBgsbY=
 github.com/eugenmayer/go-scp v1.1.1 h1:dL2rwHhZosaaUTkPfFnwUGpDQuLp5kBQuxHY2lWkuIE=
 github.com/eugenmayer/go-scp v1.1.1/go.mod h1:NdOO0lMv8yhuA0IN323ehhPcGGCcIFTXZx0hJKm3zcs=
-github.com/eugenmayer/go-sshclient v1.1.1 h1:qLU/WXAzalEQz1Yg7JvBia4xGGqMHpfyWLBG+iL+a/g=
-github.com/eugenmayer/go-sshclient v1.1.1/go.mod h1:heDxCGCROqvmRUhGan3jFofeIE2T3RNbBoSLfaAv8EI=
+github.com/eugenmayer/go-sshclient v1.1.2 h1:KNgpTHQ8jv/Onl7Vf5LH5rO0lYwaaL180iKNvz30m74=
+github.com/eugenmayer/go-sshclient v1.1.2/go.mod h1:wA7TKDGcT5ID0cCuyHuh1Nfy3bpkwAAWWIKdNQZh9FU=
 github.com/hnakamur/go-scp v1.0.2 h1:i2I0O0pjAaX4BXJFrp1blsIdjOBekc5QOaB0AbdO1d0=
 github.com/hnakamur/go-sshd v0.2.1 h1:HOvlvBWPjedji3PUuF8xpRHVnYXX3LMfoi2NW8+OxOk=
 github.com/kballard/go-shellquote v0.0.0-20180428030007-95032a82bc51 h1:Z9n2FFNUXsshfwJMBgNA0RU6/i7WVaAegv3PtuIHPMs=

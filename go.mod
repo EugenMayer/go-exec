@@ -2,7 +2,7 @@ module github.com/eugenmayer/go-exec
 
 go 1.19
 
-require github.com/eugenmayer/go-sshclient v1.1.1
+require github.com/eugenmayer/go-sshclient v1.1.2
 
 require (
 	github.com/eugenmayer/go-scp v1.1.1 // indirect
