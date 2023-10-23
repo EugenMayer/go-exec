@@ -4,5 +4,7 @@ init:
 	go mod vendor
 
 update:
-	go get -u
+	go get -u ./runner/
+	go get -u ./utils/
+	go get -u ./exec/
 	go mod tidy
